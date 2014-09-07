@@ -6,7 +6,7 @@ data$Date<-as.Date(data$Date, format = "%d/%m/%Y")
 # subset the data for Date = 1/2/2007 and 2/2/2007
 filterdata <- subset(data,data$Date %in%  c(as.Date("2007-02-01"),as.Date("2007-02-02")))
 
-# Specific Code for Plot1
+# Specific Code for Plot2
 filterdata$Global_active_power<-as.numeric(as.character(filterdata$Global_active_power))
 png(file= "plot2.png")
 plot2<-plot(filterdata$Timestamp,filterdata$Global_active_power,xlab = "Days",ylab = "Global Active Power (kilowatts)",type = "l" )
